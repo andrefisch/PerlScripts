@@ -1,0 +1,4 @@
+sub countPairs
+{
+    $_ = pop;
+}
