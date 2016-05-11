@@ -1,8 +1,9 @@
-#! /usr/bin/perl
-
-print ":";
-while (<>) {
-  chomp;
-  my $result = eval;
-  print "$_ = $result\n\n:";
+#!/usr/bin/env perl
+do
+{
+    print(":");
+    $_x = <>;
+    chomp $_x;
+    print(eval($_x)."\n")
 }
+while($_x ne "q")
