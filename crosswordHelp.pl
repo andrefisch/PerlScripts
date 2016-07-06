@@ -7,6 +7,10 @@
 # Useful for cheating at crossword puzzles!
 # NOTE: try putting the string inside double quotes if there is an error
 
+# For a blank space use a dot
+# Ex: Field where animals graze
+# Ex: pa..u.e
+
 sub crossword 
 {
     my $pattern = shift;
