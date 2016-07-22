@@ -3,7 +3,7 @@ use warnings;
 sub quick 
 {
     @a = join '', pop
-    1 while s/(.+)\1/$1/;
+    1 while s/(.)\1/$1/;
     $_
 }
 

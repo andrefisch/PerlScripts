@@ -10,11 +10,14 @@ sub triple_line {
 sub triple_word {
     our (@prefix, %hash);
     my $word = shift;
+
     if (@prefix == 2) {
         my $key = join " ", @prefix;
+
         my $aref = $hash{$key};
         push @$aref, $word;
         $hash{$key} = $aref;
+
         shift @prefix;
     }
     push @prefix, $word;
