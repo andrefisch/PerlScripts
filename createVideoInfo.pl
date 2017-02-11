@@ -17,16 +17,22 @@ open INFO, "> $path/info2.txt" or die;
 
 print "What city does this tournament take place in?: ";
 # 1 : set city tournament is in
-my $city = <>;		#argument is passed in when script starts
+my $city = <>;	    	#argument is passed in when script starts
 print "What is the name of the tournament?: ";
 # 2 : set name of tournament
 my $tournament = <>;	#input this when running the script
 print "What type of tournament is this?: ";
 # 3 : set type of tournament
-my $type = <>;		#input this when running the script
-my $country = "";	#from countries dictionary using city
+my $type = <>;	    	#input this when running the script
+print "What gender is fencing?: ";
+# 3 : set type of tournament
+my $gender = <>;		#input this when running the script
+print "What weapon is fencing?: ";
+# 3 : set type of tournament
+my $fencer = <>;		#input this when running the script
 
-my $round = "";		#from list of files in directory
+my $country = "";	    #from countries dictionary using city
+my $round = "";		    #from list of files in directory
 my $right_fencer = ""; 	#from fencers dictionary using fencers last name
 my $left_fencer = ""; 	#from fencers dictionary using fencers last name
 
@@ -119,10 +125,10 @@ for (my $i = 0; $i < $size; $i++)
 	}
 
 	# Title info for the videos
-	my $title = "$city 2016 - $round - $words[2] $words[3] v $words[5] $last\n\n";
+	my $title = "$city 2017 - $round - $words[2] $words[3] v $words[5] $last\n\n";
 
 	# Video info for the videos
-	my $info = "http://www.facebook.com/pages/CyrusofChaos\nhttps://twitter.com/CyrusofChaos\nhttps://plus.google.com/105213664966119536022/videos\nDogecoin: DCCwW9FrRac7PXLuE3UTonuhPBo9k8GKJ3\n\nThis is a bout in the round of $round at the $tournament, a men's sabre $type in $city, $country. $right_fencer is on the right and $left_fencer is on the left.\n\n\n";
+	my $info = "http://www.facebook.com/pages/CyrusofChaos\nhttps://twitter.com/CyrusofChaos\nhttps://plus.google.com/105213664966119536022/videos\nDogecoin: DCCwW9FrRac7PXLuE3UTonuhPBo9k8GKJ3\n\nThis is a bout in the round of $round at the $tournament, a $gender\'s $weapon $type in $city, $country. $right_fencer is on the right and $left_fencer is on the left.\n\n\n";
 
 	print INFO "$title";
 	print INFO "$info";
